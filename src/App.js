@@ -8,15 +8,16 @@ import Navbar from './Components/Navbar/Navbar';
 import { useState } from 'react';
 import axios from 'axios';
 import mp3 from './notify.mp3';
+import ActionAlerts from './Components/AlertMessage';
 const projectId = process.env.REACT_APP_CHAT_PROJECT_ID;
 
 // const projectId = "fb71f969-9166-46ab-818b-b732ac4c977d"
 const initialstate = { username: '', first_name: '', last_name: '', avatar: '', is_online: false }
-
 function App() {
   const [user, setUser] = useState(initialstate)
   if (!localStorage.getItem('username')) return (
     <>
+      <ActionAlerts severity="info" message="username: demo, Password: demo@123" title="Demo Data" />
       <LoginForm />
       <ToastContainer />
     </>
