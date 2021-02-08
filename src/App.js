@@ -14,7 +14,6 @@ const projectId = process.env.REACT_APP_CHAT_PROJECT_ID;
 const initialstate = { username: '', first_name: '', last_name: '', avatar: '', is_online: false }
 
 function App() {
-  console.log(process.env)
   const [user, setUser] = useState(initialstate)
   if (!localStorage.getItem('username')) return (
     <>
@@ -29,7 +28,6 @@ function App() {
       const authObject = { 'Project-ID': projectId, 'User-Name': username, 'User-Secret': password }
       axios.get("https://api.chatengine.io/chats/me/", { headers: authObject })
         .then(res => {
-          console.log(res)
           setUser({
             username: res?.data?.username,
             first_name: res.data.first_name,
