@@ -9,7 +9,7 @@ import Navbar from './Components/Navbar/Navbar';
 import { useState } from 'react';
 import axios from 'axios';
 import mp3 from './notify.mp3';
-const projectId = process.env.REACT_APP_CHAT_PROJECT_ID;
+const projectId = process.env.CHAT_PROJECT_ID;
 const initialstate = { username: '', first_name: '', last_name: '', avatar: '', is_online: false }
 
 function App() {
