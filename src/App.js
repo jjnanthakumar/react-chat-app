@@ -9,8 +9,10 @@ import Navbar from './Components/Navbar/Navbar';
 import { useState } from 'react';
 import axios from 'axios';
 import mp3 from './notify.mp3';
-// const projectId = process.env.CHAT_PROJECT_ID || process.env.REACT_APP_CHAT_PROJECT_ID;
-const projectId = "fb71f969-9166-46ab-818b-b732ac4c977d"
+import dotenv from 'dotenv';
+dotenv.config();
+const projectId = process.env.REACT_APP_CHAT_PROJECT_ID;
+// const projectId = "fb71f969-9166-46ab-818b-b732ac4c977d"
 const initialstate = { username: '', first_name: '', last_name: '', avatar: '', is_online: false }
 
 function App() {
