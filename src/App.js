@@ -14,6 +14,7 @@ const projectId = "fb71f969-9166-46ab-818b-b732ac4c977d"
 const initialstate = { username: '', first_name: '', last_name: '', avatar: '', is_online: false }
 
 function App() {
+  console.log(process.env)
   const [user, setUser] = useState(initialstate)
   if (!localStorage.getItem('username')) return (
     <>
