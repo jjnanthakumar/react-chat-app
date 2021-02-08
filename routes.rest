@@ -1,0 +1,5 @@
+###
+GET https://api.chatengine.io/chats/me/
+Project-ID: fb71f969-9166-46ab-818b-b732ac4c977d
+User-Name: nandy
+User-Secret: nandy@123
